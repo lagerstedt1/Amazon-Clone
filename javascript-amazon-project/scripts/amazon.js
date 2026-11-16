@@ -79,9 +79,10 @@ document.querySelectorAll('.js-add-to-cart')
     const {productId} = button.dataset;
 
     addToCart(productId);
+    updateCartQuantity();
 
 
-    addedMessage = document.querySelector(`.js-added-to-cart-${productId}`);
+    const addedMessage = document.querySelector(`.js-added-to-cart-${productId}`);
 
     addedMessage.classList.add('active-added-to-cart');
 
